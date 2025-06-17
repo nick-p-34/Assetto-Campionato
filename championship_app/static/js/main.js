@@ -3,6 +3,13 @@ const mainContent = document.querySelector('main');
 let file = 'html/home.html';
 
 document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.menu-item').forEach(button => {
+            const annotation = document.createElement('span');
+            annotation.className = 'annotation';
+            annotation.textContent = button.title;
+            button.appendChild(annotation);
+    });
+
     fetch(file)
         .then(response => {
             if (!response.ok) {
