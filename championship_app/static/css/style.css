@@ -8,6 +8,7 @@
   --accent-color: #e10600;
   --accent-hover: #ff2a1a;
   --accent-dark: #a10400;
+  --footer-colour: rgba(20,20,20,0.95);
 
   --font-body: 'Roboto Condensed', sans-serif;
   --font-heading: 'Orbitron', sans-serif;
@@ -92,7 +93,7 @@ header h1 {
   bottom: 0;
   width: 100%;
   height: var(--footer-height);
-  background-color: rgba(20,20,20,0.95);
+  background-color: var(--footer-colour);
   color: var(--text-muted);
   display: flex;
   align-items: center;
@@ -103,27 +104,67 @@ header h1 {
   font-size: 0.9rem;
 }
 
-.fixed_footer small {
-  margin: 0;
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: var(--footer-colour);
+    height: 100%
 }
 
-.button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  background-color: var(--accent-color);
-  color: #111;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color var(--transition-speed), transform var(--transition-speed);
-  text-decoration: none;
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 100%;
+    color: var(--footer-colour);
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
 }
 
-.button:hover, .button:focus {
-  background-color: #ff9b4a;
-  transform: translateY(-1px);
+.menu-item img {
+    height: 75%;
+}
+
+.menu-item:hover {
+    background-color: #444;
+}
+
+.menu-item.active {
+    border-bottom: 3px solid #666;
+}
+
+.menu-item:focus {
+    outline: none;
+}
+
+.annotation {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, background-color 0.2s, border-color 0.2s;
+    margin-bottom: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.menu-item:hover .annotation {
+    opacity: 1;
 }
 
 @media (max-width: 600px) {
