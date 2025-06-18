@@ -2,6 +2,98 @@
     <a href="https://github.com/nick-p-34/Assetto-Companion" target="_blank">GitHub</a>
 </p>
 
-<p>On the Home page you will see an overview of your current championships and quick links to common actions.</p>
-<p>Use the menu below to navigate to creating a new championship, viewing existing ones, adjusting car & track settings, or changing app preferences.</p>
-<p>In the future, this dashboard may include recent results, upcoming rounds, and summary charts.</p>
+<div id="home-page" class="p-4 space-y-8">
+    <h2 class="text-xl font-bold mb-2">Previous Race</h2>
+
+    <div class="card recent-race">
+        <div class="recent-race-images">
+            <div class="recent-race-image-block">
+                <img src="img/track_placeholder.png" alt="Track layout">
+            </div>
+
+            <div class="recent-race-image-block">
+                <img src="img/champ_logo_placeholder.png" alt="Championship logo">
+            </div>
+        </div>
+
+        <div class="recent-race-details">
+            <strong>Track</strong>
+            <p>---</p>
+            <strong>Car</strong>
+            <p>---</p>
+            <strong>Position</strong>
+            <p>---</p>
+            <strong>Fastest Lap</strong>
+            <p>---</p>
+        </div>
+    </div>
+
+    <h2 class="text-xl font-bold mb-2">Upcoming Races</h2>
+
+    <div class="upcoming-race-card card">
+        <div class="upcoming-race-images">
+            <div class="upcoming-race-image-block">
+                <img src="img/track_placeholder.png" alt="Track layout">
+            </div>
+            <div class="upcoming-race-image-block">
+                <img src="img/champ_logo_placeholder.png" alt="Championship logo">
+            </div>
+        </div>
+
+        <div class="upcoming-race-details">
+            <p class="race-info">Round - of ---</p>
+            <p class="race-info"><strong>Track:</strong> ---</p>
+            <p class="race-info"><strong>Car:</strong> ---</p>
+        </div>
+    </div>
+
+    <h2 class="text-xl font-bold mb-2">Trophy Cabinet</h2>
+
+    <div class="trophy-cabinet card trophy-cabinet-container">
+        <div class="trophy-card">
+            <div class="trophy-image-block">
+                <img src="img/trophy_placeholder.png" alt="Trophy">
+            </div>
+            <div class="trophy-text">
+                <p class="trophy-achievement">1st Place</p>
+                <p class="trophy-info">Track</p>
+                <p class="trophy-info">Championship</p>
+            </div>
+        </div>
+
+        <div class="trophy-card">
+            <div class="trophy-image-block">
+                <img src="img/trophy_placeholder.png" alt="Trophy">
+            </div>
+            <div class="trophy-text">
+                <p class="trophy-achievement">2nd Place</p>
+                <p class="trophy-info">Track</p>
+                <p class="trophy-info">Championship</p>
+            </div>
+        </div>
+
+        <div class="trophy-card">
+            <div class="trophy-image-block">
+                <img src="img/trophy_placeholder.png" alt="Trophy">
+            </div>
+            <div class="trophy-text">
+                <p class="trophy-achievement">3rd Place</p>
+                <p class="trophy-info">Track</p>
+                <p class="trophy-info">Championship</p>
+            </div>
+        </div>
+
+        <div class="trophy-card">
+            <div class="trophy-image-block">
+                <img src="img/trophy_placeholder.png" alt="Trophy">
+            </div>
+            <div class="trophy-text">
+                <p class="trophy-achievement">Fastest Lap</p>
+                <p class="trophy-info">Track</p>
+                <p class="trophy-info">Championship</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="static/js/home.js"></script>
